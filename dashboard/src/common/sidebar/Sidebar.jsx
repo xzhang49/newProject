@@ -44,7 +44,39 @@ const Sidebar = () => {
                 <span className="text">Products</span>
               </NavLink>
             </li>
+            <li className="menu-item">
+              <NavLink
+                activeClassName="active"
+                className="menu-link"
+                to="/category"
+              >
+                <i className="icon fas fa-list"></i>
+                <span className="text">Categories</span>
+              </NavLink>
+            </li>
+            <li className="menu-item">
+              <NavLink
+                activeClassName="active"
+                className="menu-link"
+                to="/orders"
+              >
+                <i className="icon fas fa-bags-shopping"></i>
+                <span className="text">Orders</span>
+              </NavLink>
+            </li>
+            <li className="menu-item">
+              <NavLink
+                activeClassName="active"
+                className="menu-link"
+                to="/users"
+              >
+                <i className="icon fas fa-user"></i>
+                <span className="text">Users</span>
+              </NavLink>
+            </li>
           </ul>
+          <br />
+          <br />
         </nav>
       </aside>
     </div>
