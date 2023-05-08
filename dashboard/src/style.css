@@ -1,24 +1,52 @@
-.loginPage {
-    background: url('Images/houston.jpg');
-    background: linear-gradient(rgba(11, 11, 11, 0.5), rgba(10, 10, 10, 0.5)), url("Images/houston.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 120%;
+@charset "UTF-8";
+
+.table thead th {
+    color: #adb5bd;
+    font-weight: 400;
+}
+.table-lg td,
+.table-lg th {
+    padding: 0.8rem 1rem;
+}
+tbody td {
+    border-bottom: 1px solid #cfdbe6;
+}
+tbody tr:hover {
+    background-color: #ebf0fd !important;
+}
+a.disabled {
+    pointer-events: none;
+}
+.btn-primary {
+    background-color: #4fa607 !important;
+    border: 1px solid #4fa607 !important;
+}
+.Header-green {
+    background-color: #4fa607;
 }
 
-.loginForm {
-    background-color: rgba(1, 32, 93, 0.6);
-    color: white;
+icon-xs,
+icon-sm,
+icon-md,
+icon-lg {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-shrink: 0;
+    flex-grow: 0;
 }
 
-.employee_image {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+icon-xs {
+    width: 32px;
+    height: 32px;
+    line-height: 32px !important;
+    font-size: 16px;
 }
 
-.empImg {
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
+icon-sm {
+    width: 48px;
+    height: 48px;
+    line-height: 48px !important;
+    font-size: 20px;
 }

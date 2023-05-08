@@ -1,18 +1,18 @@
 import React from 'react'
 import Sidebar from "../../common/sidebar/Sidebar"
 import Header from "../../common/Header/Header"
-import Categories from "../../components/Categories/Categories"
+import OrderDetailmain from "../../components/orders/OrderDetailmain"
 
-const CategoriesPage = () => {
+const OrderDetailPage = () => {
   return (
     <>
         <Sidebar />  
         <main className='main-wrap'>
             <Header />
-            <Categories />
+            <OrderDetailmain />
         </main>
     </>
   )
 }
 
-export default CategoriesPage
+export default OrderDetailPage

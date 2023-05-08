@@ -34,7 +34,36 @@ const AddProduct = () => {
                       required
                     />
                   </div>
-                  
+                  <div className="mb-4">
+                    <label htmlFor="product_price" className="form-label">
+                      Price
+                    </label>
+                    <input 
+                      type="number" 
+                      placeholder='Type here'
+                      className='form-control'
+                      id="product_price"
+                      required
+                    />
+                  </div>
+                  <div className="mb-4">
+                    <label className="form-label">Description</label>
+                    <textarea
+                      placeholder='Type here'
+                      className='form-control'
+                      rows="7"
+                      required
+                    ></textarea>
+                  </div>
+                  <div className="mb-4">
+                    <label className="form-label">Images</label>
+                    <input
+                      className='form-control'
+                      type="text" 
+                      placeholder='Enter Image URL'
+                    />
+                    <input className='form-control mt-3' type="file" />
+                  </div>
                 </div>
               </div>
             </div>

@@ -3,8 +3,11 @@ import Sidebar from "../../common/sidebar/Sidebar"
 import Header from "../../common/Header/Header"
 import MainProducts from '../../components/products/MainProducts'
 import AddProduct from '../../components/products/AddProduct'
+import EditProduct from '../../components/products/EditProduct'
+import products from '../../data/Products'
 
-const ProductPage = () => {
+const ProductPage = ({ match }) => {
+  // const productId = products.find((p) => p._id === match.params.id)
   return (
     <>
       <Sidebar />
@@ -12,6 +15,7 @@ const ProductPage = () => {
         <Header />
         <MainProducts />
         <AddProduct />
+        {/* <EditProduct productId={productId} /> */}
       </main>
     </>
   )
