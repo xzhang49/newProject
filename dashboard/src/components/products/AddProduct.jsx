@@ -1,5 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from "react-router-dom"
+import { useDispatch, useSelector } from "react-redux"
+import { toast } from "react-toastify"
+import { PRODUCT_CREATE_RESET } from "../../Redux/Constants/ProductConstants"
+import { createProduct } from "./../../Redux/Actions/ProductActions"
+import Toast from "../LoadingError/Toast"
+import Message from "../LoadingError/Error"
+import Loading from "../LoadingError/Loading"
+
+const ToastObjects = {
+  pauseOnFocusLoss: false,
+  draggable: false,
+  pauseOnHover: false,
+  autoClose: 2000,
+};
 
 const AddProduct = () => {
   return (

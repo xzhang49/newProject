@@ -8,6 +8,7 @@ import CategoriesPage from './pages/categoriesPage/CategoriesPage'
 import OrderPage from "./pages/orderPage/OrderPage"
 import OrderDetailPage from "./pages/orderDetailPage/OrderDetailPage"
 import "./style.css"
+import "./responsive.css"
 
 function App() {
 
