@@ -16,17 +16,47 @@ const ToastObjects = {
 };
 
 const AddProduct = () => {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [image, setImage] = useState("");
+  const [categories, setCategories] = useState("");
+  const [count, setCount] = useState(0);
+  const [price, setPrice] = useState(0); 
+  
+  const dispatch = useDispatch();
+
+  const productCreate = useSelector((state) => state.productCreate);
+  const { loading, error, product } = productCreate;
+
+  useEffect(() => {
+    if (product) {
+      toast.success("Product Added", ToastObjects);
+      dispatch({ type: PRODUCT_CREATE_RESET });
+      setTitle("");
+      setDescription("");
+      setImage("");
+      setCategories("");
+      setCount(0);
+      setPrice(0);
+    }
+  }, [product, dispatch]);
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    dispatch(createProduct(title, description, image, categories, count, price));
+  };
+
   return (
     <>
       <section className="content-main" style={{ maxWidth: "1200px "}}>
-        <form>
+        <form onSubmit={submitHandler}>
           <div className="content-header">
             <button className="btn btn-danger text-white">
               Go to Products
             </button>
             <h2 className="content-title">Add product</h2>
             <div>
-              <button className="btn btn-primary">
+              <button type="submit" className="btn btn-primary">
                 Publish Now
               </button>
             </div>
@@ -36,6 +66,8 @@ const AddProduct = () => {
             <div className="col-xl-8 col-lg-8">
               <div className="card mb-4 shadow-sm">
                 <div className="card-body">
+                  {error && <Message variant="alert-danger">{error}</Message>}
+                  {loading && <Loading />}
                   <div className="mb-4">
                     <label htmlFor="product_title" className="form-label">
                       Product Title
@@ -46,6 +78,59 @@ const AddProduct = () => {
                       className='form-control'
                       id="product_title"
                       required
+                      value={title}
+                      onChange={(e) => setTitle(e.target.value)}
+                    />
+                  </div>
+                  <div className="mb-4">
+                    <label className="form-label">Description</label>
+                    <textarea
+                      placeholder='Type here'
+                      className='form-control'
+                      rows="7"
+                      required
+                      value={description}
+                      onChange={(e) => setDescription(e.target.value)}
+                    ></textarea>
+                  </div>
+                  <div className="mb-4">
+                    <label className="form-label">Images</label>
+                    <input
+                      className='form-control'
+                      type="text" 
+                      placeholder='Enter Image URL'
+                      value={image}
+                      required
+                      onChange={(e) => setImage(e.target.value)}
+                    />
+                    <input className='form-control mt-3' type="file" />
+                  </div>
+                  <div className="mb-4">
+                    <label htmlFor="product_categories" className="form-label">
+                      Categories
+                    </label>
+                    <input 
+                      type="text" 
+                      placeholder='Type here'
+                      className='form-control'
+                      id="product_categories"
+                      required
+                      value={categories}
+                      onChange={(e) => setCategories(e.target.value)}
+                    />
+                  </div>
+                  <div className="mb-4">
+                    <label htmlFor="product_count" className="form-label">
+                      Count
+                    </label>
+                    <input 
+                      type="number" 
+                      placeholder='Type here'
+                      className='form-control'
+                      id="product_count"
+                      required
+                      value={count}
+                      onChange={(e) => setCount(e.target.value)}
                     />
                   </div>
                   <div className="mb-4">
@@ -58,25 +143,9 @@ const AddProduct = () => {
                       className='form-control'
                       id="product_price"
                       required
+                      value={price}
+                      onChange={(e) => setPrice(e.target.value)}
                     />
-                  </div>
-                  <div className="mb-4">
-                    <label className="form-label">Description</label>
-                    <textarea
-                      placeholder='Type here'
-                      className='form-control'
-                      rows="7"
-                      required
-                    ></textarea>
-                  </div>
-                  <div className="mb-4">
-                    <label className="form-label">Images</label>
-                    <input
-                      className='form-control'
-                      type="text" 
-                      placeholder='Enter Image URL'
-                    />
-                    <input className='form-control mt-3' type="file" />
                   </div>
                 </div>
               </div>
