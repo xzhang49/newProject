@@ -5,12 +5,13 @@ const cors = require("cors");
 const connectDatabase = require("./config/MongoDb.js");
 // const { errorHandler, notFound } = require("./Middleware/Errors.js");
 
-const authRoute = require("./routes/auth");
-const userRoute = require("./routes/user");
-const productRoute = require("./routes/product");
-const cartRoute = require("./routes/cart");
-const orderRoute = require("./routes/order");
-const stripeRoute = require("./routes/stripe");
+const authRoute = require("./routes/AuthRoutes");
+const userRoute = require("./routes/UserRoutes");
+const productRoute = require("./routes/ProductRoutes");
+const cartRoute = require("./routes/CartRoutes");
+const orderRoute = require("./routes/OrderRoutes");
+const stripeRoute = require("./routes/StripeRoute");
+const { errorHandler, notFound } = require("./Middleware/Errors.js");
 
 dotenv.config();
 connectDatabase();
@@ -29,8 +30,8 @@ app.use("/api/orders", orderRoute);
 app.use("/api/checkout", stripeRoute);
 
 // ERROR HANDLER
-// app.use(notFound);
-// app.use(errorHandler);
+app.use(notFound);
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 1000;
 app.listen(PORT, console.log(`server run in port ${PORT}`));

@@ -1,5 +1,5 @@
 import React from 'react'
-import "./style.css"
+import "./footer.css"
 
 const Footer = () => {
   return (
@@ -7,46 +7,29 @@ const Footer = () => {
       <footer>
         <div className='container grid2'>
           <div className='box'>
-            <h1>Bonik</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor libero id et, in gravida. Sit diam duis mauris nulla cursus. Erat et lectus vel ut sollicitudin elit at amet.</p>
+            <h1>PF to Buy Go</h1>
             <div className='icon d_flex'>
               <div className='img d_flex'>
-                <i className='fa-brands fa-google-play'></i>
-                <span>Google Play</span>
-              </div>
+                <i className='fa-brands fa-weixin'></i>
+                <span>weichat</span>
+              </div> 
+              
+            </div>
+            <div className='icon d_flex'>
               <div className='img d_flex'>
-                <i className='fa-brands fa-app-store-ios'></i>
-                <span>App Store</span>
+                <i className='fa-brands fa-cc-stripe'></i>
+                <span>stripe</span>
               </div>
             </div>
           </div>
 
           <div className='box'>
-            <h2>About Us</h2>
+            <h2>联系方式</h2>
             <ul>
-              <li>Careers</li>
-              <li>Our Stores</li>
-              <li>Our Cares</li>
-              <li>Terms & Conditions</li>
-              <li>Privacy Policy</li>
-            </ul>
-          </div>
-          <div className='box'>
-            <h2>Customer Care</h2>
-            <ul>
-              <li>Help Center </li>
-              <li>How to Buy </li>
-              <li>Track Your Order </li>
-              <li>Corporate & Bulk Purchasing </li>
-              <li>Returns & Refunds </li>
-            </ul>
-          </div>
-          <div className='box'>
-            <h2>Contact Us</h2>
-            <ul>
-              <li>3333 Weslayan, Houston, TX 77027, United States </li>
-              <li>Email: xzhanguh@gmail.com</li>
-              <li>Phone: 832-420-9391</li>
+              <li>电话: 832-420-9391</li>
+              <li>微信号: xzhanguh</li>
+              <li>地址: 3333 Weslayan, Houston, TX 77027, United States </li>
+              <li>邮箱: xzhanguh@gmail.com</li>
             </ul>
           </div>
         </div>

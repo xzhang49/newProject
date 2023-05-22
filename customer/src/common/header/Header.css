@@ -15,8 +15,16 @@
   /*------search-----------*/
   .search {
     padding: 20px 0;
+    width: auto;
+    height: auto;
   }
-  .search .logo img {
+  .logo {
+    color: #e94560;
+    font-weight: 2000;
+    font-style: italic;
+    font-family: cursive;
+  }
+  .logo img {
     width: auto;
     height: auto;
   }
@@ -91,6 +99,7 @@
   header {
     height: 8vh;
     box-shadow: -1px 15px 17px -8px rgba(0, 0, 0, 0.1);
+    background-color: #e00529;
   }
   header ul {
     line-height: 8vh;

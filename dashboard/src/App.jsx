@@ -1,16 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import Login from "./Login"
-import Dashboard from './Dashboard'
+
+import Login from "./common/login/Login"
 import HomePage from './pages/homePage/HomePage'
 import ProductPage from './pages/productPage/ProductPage'
 import CategoriesPage from './pages/categoriesPage/CategoriesPage'
 import OrderPage from "./pages/orderPage/OrderPage"
 import OrderDetailPage from "./pages/orderDetailPage/OrderDetailPage"
+import UserPage from "./pages/userPage/UserPage"
+import AccountPage from "./pages/accountPage/AccountPage"
+
+import { useDispatch, useSelector } from "react-redux";
+import { listProducts } from "./Redux/Actions/ProductActions";
+import { listOrders } from "./Redux/Actions/OrderActions";
+
 import "./style.css"
 import "./responsive.css"
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
+  const dispatch = useDispatch();
 
   return (
     <BrowserRouter>
@@ -20,6 +29,8 @@ function App() {
         <Route path='/category' element={<CategoriesPage />}></Route>
         <Route path='/orders' element={<OrderPage />}></Route>
         <Route path='/order' element={<OrderDetailPage />}></Route>
+        <Route path='/users' element={<UserPage />}></Route>
+        <Route path='/account' element={<AccountPage />}></Route>
         <Route path='/login' element={<Login />}></Route>
       </Routes>
     </BrowserRouter>

@@ -68,10 +68,30 @@ const Sidebar = () => {
               <NavLink
                 activeClassName="active"
                 className="menu-link"
+                to="/account"
+              >
+                <i className="icon fas fa-credit-card"></i>
+                <span className="text">Account</span>
+              </NavLink>
+            </li>
+            <li className="menu-item">
+              <NavLink
+                activeClassName="active"
+                className="menu-link"
                 to="/users"
               >
                 <i className="icon fas fa-user"></i>
                 <span className="text">Users</span>
+              </NavLink>
+            </li>
+            <li className="menu-item">
+              <NavLink
+                activeClassName="active"
+                className="menu-link"
+                to="/login"
+              >
+                <i className="icon fas fa-arrow-right"></i>
+                <span className="text">Exit</span>
               </NavLink>
             </li>
           </ul>

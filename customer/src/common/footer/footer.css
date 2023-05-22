@@ -1,17 +1,17 @@
 footer {
-    background-color: #0f3460;
-    padding: 100px 0;
-    color: #fff;
+    background-color: #e00529;
+    padding: 40px 0;
+    color: 000;
 }
 footer h1 {
     margin-bottom: 30px;
-    color: #e94560;
+    color: #070708;
     font-weight: 800;
     font-style: italic;
 }
 footer .img {
-    background-color: #0c2a4d;
-    padding: 15px 20px;
+    background-color: #e00529;
+    padding: 5px 20px;
     border-radius: 5px;
 }
 footer .img i {
@@ -32,5 +32,5 @@ footer h2 {
 }
 footer li {
     margin-bottom: 10px;
-    opacity: 0.5;
+    opacity: 0.8;
 }

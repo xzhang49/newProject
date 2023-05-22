@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Data from "./assets/data/Data"
 import Sdata from "./assets/data/Sdata"
 import Layout from "./common/layout/Layout"
-import Home from "./pages/Home/Home"
+import Home from "./pages/home/Home"
 import User from "./pages/user/User"
 import Order from "./pages/order/Order"
 import Contact from "./pages/contact/Contact"
@@ -12,6 +12,7 @@ import Cart from "./pages/cart/Cart"
 import Login from "./pages/login/Login"
 import Signup from "./pages/signup/Signup"
 import Checkout from "./pages/checkout/Checkout"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const { productItems } = Data

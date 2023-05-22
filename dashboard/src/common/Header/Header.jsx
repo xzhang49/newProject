@@ -2,6 +2,9 @@ import React, { useEffect } from 'react'
 import { Link } from "react-router-dom"
 import $ from "jquery"
 
+import { useDispatch } from "react-redux"
+import { logout } from "../../redux/Actions/UserActions"
+
 const Header = () => {
   useEffect(() => {
     $("[data-trigger]").on("click", function (e) {
@@ -21,6 +24,10 @@ const Header = () => {
       }
     });
   }, []);
+
+  const logoutHandler = () => {
+    dispatch(logout());
+  };
 
   return (
     <header className="main-header navbar">
@@ -83,7 +90,11 @@ const Header = () => {
               <Link className="dropdown-item" to="#">
                 Settings
               </Link>
-              <Link className='dropdown-item text-danger' to="#">
+              <Link 
+                onClick={logoutHandler}
+                className='dropdown-item text-danger' 
+                to="/login"
+              >
                 Exit
               </Link>
             </div>
