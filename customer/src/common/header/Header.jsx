@@ -1,13 +1,10 @@
 import React from 'react'
-import "./Header.css"
-import Search from "./Search"
-import Navbar from "./Navbar"
+import Navbar from "./NavbarNew"
 
 const Header = () => {
   return (
     <>
-      <Search />
-      {/* <Navbar /> */}
+      <Navbar />
     </>
   )
 }

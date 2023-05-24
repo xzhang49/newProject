@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { Link } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { toast } from "react-toastify"
-import { PRODUCT_CREATE_RESET } from "../../Redux/Constants/ProductConstants"
-import { createProduct } from "./../../Redux/Actions/ProductActions"
+import { PRODUCT_CREATE_RESET } from "../../redux/Constants/ProductConstants"
+import { createProduct } from "./../../redux/Actions/ProductActions"
 import Toast from "../LoadingError/Toast"
 import Message from "../LoadingError/Error"
 import Loading from "../LoadingError/Loading"
@@ -19,7 +19,7 @@ const AddProduct = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
-  const [categories, setCategories] = useState("");
+  const [category, setCategory] = useState("");
   const [count, setCount] = useState(0);
   const [price, setPrice] = useState(0); 
   
@@ -35,6 +35,7 @@ const AddProduct = () => {
       setTitle("");
       setDescription("");
       setImage("");
+      setImageFile("");
       setCategories("");
       setCount(0);
       setPrice(0);
@@ -43,7 +44,7 @@ const AddProduct = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(createProduct(title, description, image, categories, count, price));
+    dispatch(createProduct(title, description, image, category, count, price));
   };
 
   return (
@@ -103,11 +104,15 @@ const AddProduct = () => {
                       required
                       onChange={(e) => setImage(e.target.value)}
                     />
-                    <input className='form-control mt-3' type="file" />
+                    <input 
+                      className='form-control mt-3'
+                      type="file"
+                      onChange={(e) => setImage(e.target.value)}
+                    />
                   </div>
                   <div className="mb-4">
                     <label htmlFor="product_categories" className="form-label">
-                      Categories
+                      Category
                     </label>
                     <input 
                       type="text" 
@@ -115,8 +120,8 @@ const AddProduct = () => {
                       className='form-control'
                       id="product_categories"
                       required
-                      value={categories}
-                      onChange={(e) => setCategories(e.target.value)}
+                      value={category}
+                      onChange={(e) => setCategory(e.target.value)}
                     />
                   </div>
                   <div className="mb-4">

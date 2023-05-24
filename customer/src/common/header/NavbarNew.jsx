@@ -3,11 +3,11 @@ import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 
-const Search = () => {
+const NavbarNew = () => {
   return (
     <Navbar fixed='top' collapseOnSelect expand="lg" bg="danger" variant="light">
       <Container>
-        <Navbar.Brand href="/">PF to Buy Go</Navbar.Brand>
+        <Navbar.Brand href="/">PF</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
@@ -17,10 +17,10 @@ const Search = () => {
         
           <Nav>
             <Nav.Link href="/">
-              <i className='fa fa-user icon-circle'></i>
+              <i className='fa fa-user fa-lg'></i>
             </Nav.Link>
             <Nav.Link href="/cart">
-              <i className='fa fa-shopping-bag icon-circle'></i>
+              <i className='fa fa-cart-shopping fa-lg'></i>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
@@ -29,4 +29,4 @@ const Search = () => {
   )
 }
 
-export default Search
+export default NavbarNew

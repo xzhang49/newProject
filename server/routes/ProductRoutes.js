@@ -8,7 +8,7 @@ const router = express.Router();
 
 //GET ALL PRODUCT
 router.get("/", asyncHandler(async (req, res) => {
-    const pageSize = 5;
+    const pageSize = 15;
     const page = Number(req.query.pageNumber) || 1;
     const keyword = req.query.keyword
       ? {
@@ -28,15 +28,15 @@ router.get("/", asyncHandler(async (req, res) => {
 );
 
 // ADMIN GET ALL PRODUCT WITHOUT SEARCH AND PEGINATION
-// router.get(
-//   "/all",
-//   protect,
-//   admin,
-//   asyncHandler(async (req, res) => {
-//     const products = await Product.find({}).sort({ _id: -1 });
-//     res.json(products);
-//   })
-// );
+router.get(
+  "/all",
+  // protect,
+  // admin,
+  asyncHandler(async (req, res) => {
+    const products = await Product.find({}).sort({ _id: -1 });
+    res.json(products);
+  })
+);
 
 //GET SINGlE PRODUCT
 router.get("/:id", asyncHandler(async (req, res) => {

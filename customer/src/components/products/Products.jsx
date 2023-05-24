@@ -2,14 +2,14 @@ import React from "react"
 import ProductCard from "./ProductCard"
 import "./products.css"
 
-const Products = ({ addToCart, shopItems }) => {
+const Products = ({ keyword, pagenumber, addToCart }) => {
   return (
     <>
       <section className='shop background'>
         <div className='container d_flex'>
           <div className='contentWidth'>
             <div className='product-content  grid1'>
-              <ProductCard addToCart={addToCart} shopItems={shopItems} />
+              <ProductCard keyword={keyword} pagenumber={pagenumber} addToCart={addToCart} />
             </div>
           </div>
         </div>

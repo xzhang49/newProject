@@ -11,8 +11,8 @@ import UserPage from "./pages/userPage/UserPage"
 import AccountPage from "./pages/accountPage/AccountPage"
 
 import { useDispatch, useSelector } from "react-redux";
-import { listProducts } from "./Redux/Actions/ProductActions";
-import { listOrders } from "./Redux/Actions/OrderActions";
+import { listProducts } from "./redux/Actions/ProductActions";
+import { listOrders } from "./redux/Actions/OrderActions";
 
 import "./style.css"
 import "./responsive.css"

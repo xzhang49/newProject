@@ -85,25 +85,25 @@ export const deleteProduct = (id) => async (dispatch, getState) => {
   
 // CREATE PRODUCT
 export const createProduct =
-    (title, description, image, categories, count, price) =>
-    async (dispatch, getState) => {
+    (title, description, image, category, count, price) =>
+    async (dispatch) => {
       try {
         dispatch({ type: PRODUCT_CREATE_REQUEST });
   
-        const {
-          userLogin: { userInfo },
-        } = getState();
+        // const {
+        //   userLogin: { userInfo },
+        // } = getState();
   
-        const config = {
-          headers: {
-            Authorization: `Success ${userInfo.token}`,
-          },
-        };
+        // const config = {
+        //   headers: {
+        //     Authorization: `Success ${userInfo.token}`,
+        //   },
+        // };
   
         const { data } = await axios.post(
-          `/api/products/`,
-          { title, description, image, categories, count, price },
-          config
+          `/api/products`,
+          { title, description, image, category, count, price }
+          //config
         );
   
         dispatch({ type: PRODUCT_CREATE_SUCCESS, payload: data });

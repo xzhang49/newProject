@@ -10,7 +10,7 @@ import Order from "./pages/order/Order"
 import Contact from "./pages/contact/Contact"
 import Cart from "./pages/cart/Cart"
 import Login from "./pages/login/Login"
-import Signup from "./pages/signup/Signup"
+import Register from "./pages/register/Register"
 import Checkout from "./pages/checkout/Checkout"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -45,13 +45,16 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Layout />}>
-            <Route index element={<Home productItems={productItems} addToCart={addToCart} shopItems={shopItems} />} />
+            <Route  path='/' element={<Home productItems={productItems} addToCart={addToCart} shopItems={shopItems} />} />
+            <Route  path='/search/:keyword' element={<Home productItems={productItems} addToCart={addToCart} shopItems={shopItems} />} />
+            <Route  path='/page/:pagenumber' element={<Home productItems={productItems} addToCart={addToCart} shopItems={shopItems} />} />
+            <Route  path='/search/:keyword/page/:pageNumber' element={<Home productItems={productItems} addToCart={addToCart} shopItems={shopItems} />} />
             <Route path="user" element={<User />} />
             <Route path="order" element={<Order />} />
             <Route path="contact" element={<Contact />} />
             <Route path="cart" element={<Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />} />
             <Route path="login" element={<Login />} />
-            <Route path="signup" element={<Signup />} />
+            <Route path="register" element={<Register />} />
             <Route path="checkout" element={<Checkout />} />
           </Route>
         </Routes>
