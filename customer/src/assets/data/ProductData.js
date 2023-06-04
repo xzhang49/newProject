@@ -1,0 +1,81 @@
+const ProductData = [
+      {
+        id: 7,
+        image: "./images/products/binhongcha.png",
+        title: "康师傅冰红茶",
+        price: "10",
+        count: "25",
+      },
+      {
+        id: 8,
+        image: "./images/products/lvcha.png",
+        title: "康师傅绿茶",
+        price: "10",
+        count: "10",
+      },
+      {
+        id: 9,
+        image: "./images/products/molicha.png",
+        title: "康师傅茉莉清茶",
+        price: "10",
+        count: "50 ",
+      },
+      {
+        id: 10,
+        image: "./images/products/suanmeitang.png",
+        title: "康师傅酸梅汤",
+        price: "10",
+        count: "10 ",
+      },
+      {
+        id: 11,
+        image: "./images/products/xiapian.png",
+        title: "上好佳鲜虾片",
+        price: "2",
+        count: "20 ",
+      },
+      {
+        id: 12,
+        image: "./images/products/huasheng.png",
+        title: "日本小花生",
+        price: "3",
+        count: "20 ",
+      },
+      {
+        id: 13,
+        image: "./images/products/dahuasheng.png",
+        title: "山东大花生",
+        price: "3",
+        count: "5 ",
+      },
+      {
+        id: 14,
+        image: "./images/products/zangzangbao.png",
+        title: "稻香村脏脏包巧克力味",
+        price: "10",
+        count: "10",
+      },
+      {
+        id: 15,
+        image: "./images/products/pidan.png",
+        title: "光阳海鸭皮蛋",
+        price: "3",
+        count: "2",
+      },
+      {
+        id: 16,
+        image: "./images/products/niuroumian.png",
+        title: "辣卤牛肉味面",
+        price: "3",
+        count: "2",
+      },
+      {
+        id: 17,
+        image: "./images/products/niuroumian2.png",
+        title: "红烧牛肉味面",
+        price: "3",
+        count: "2",
+      },
+]
+
+export default ProductData

@@ -42,28 +42,4 @@ footer li {
     opacity: 0.8;
 }
 
-.container {
-    max-width: 90%;
-    margin: auto;
-}
 
-.grid2 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-}
-
-.box {
-    transition: 0.5s;
-    padding: 0 20px;
-}
-
-.box:hover {
-    background-color: #ffe1e6;
-    cursor: pointer;
-}
-
-.d_flex {
-    display: flex;
-    justify-content: space-between;
-}
