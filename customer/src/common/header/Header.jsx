@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar'
 
 const Header = () => {
   return (
-    <Navbar fixed='top' collapseOnSelect expand="lg" bg="#e00529" variant="light">
+    <Navbar fixed='top' collapseOnSelect expand="lg" bg="danger" variant="light">
       <Container>
         <Navbar.Brand href="/">PF Delivery</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -19,10 +19,10 @@ const Header = () => {
 
           <Nav>
             <Nav.Link href="/">
-              <i className='fa fa-user fa-lg icon-circle'></i>
+              <i className='fa fa-user fa-lg'></i>
             </Nav.Link>
             <Nav.Link href="/">
-              <i className='fa fa-cart-shopping fa-lg icon-circle'></i>
+              <i className='fa fa-cart-shopping fa-lg'></i>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
