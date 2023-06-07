@@ -2,10 +2,17 @@ import React from 'react'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 
+const styles = {
+  cardImage: {
+    objectFit: 'cover',
+    height: '32vh'
+  }
+}
+
 const ProductCard = ({key, title, image, price, count}) => {
   return (
     <Card style={{ width: '18rem' }} key={key}>
-      <Card.Img variant="top" src={image} />
+      <Card.Img variant="top" src={image} style={styles.cardImage} />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>
