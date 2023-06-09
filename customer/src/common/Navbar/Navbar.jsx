@@ -27,7 +27,7 @@ const Navbar = () => {
                   <span className = "btn-ico">
                     <i className = "fas fa-user"></i>
                   </span>
-                  <div className='btn-txt fw-5'>账户</div>
+                  <div className='btn-txt fw-5'>我的账户</div>
                 </Link>
               </div>
               <div className = "navbar-btns">

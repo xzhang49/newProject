@@ -13,13 +13,14 @@ const Products = () => {
             </div>
             <div className='product-items grid'>
               {products.map((product) => (
-                <ProductCard 
-                  key={product.id}
-                  image={product.image}
-                  title={product.title}
-                  price={product.price}
-                  count={product.count}
-                />
+                <div key = {product.id}>
+                  <ProductCard 
+                    image={product.image}
+                    title={product.title}
+                    price={product.price}
+                    count={product.count}
+                  />
+                </div>
               ))}
             </div>
           </div>

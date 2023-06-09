@@ -9,9 +9,9 @@ const styles = {
   }
 }
 
-const ProductCard = ({key, title, image, price, count}) => {
+const ProductCard = ({title, image, price, count}) => {
   return (
-    <Card style={{ width: '24rem', margin: '2rem 0' }} key={key}>
+    <Card style={{ width: '24rem', margin: '2rem 0' }}>
       <Card.Img variant="top" src={image} style={styles.cardImage} />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
