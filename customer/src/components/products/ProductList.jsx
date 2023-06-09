@@ -1,15 +1,17 @@
 import React from 'react'
-import './products.css'
+import "./ProductList.scss"
 import ProductCard from "./ProductCard"
 import products from "../../assets/data/ProductData"
 
 const Products = () => {
   return (
-    <>
-      <section className='shop background'>
-        <div className='container d_flex'>
-          <div className='contentWidth'>
-            <div className='product-content grid1'>
+      <section className='product py-5 bg-ghost-white' id = "products">
+        <div className='container'>
+          <div className='product-content'>
+            <div className='section-title'>
+              <h3 className='fw-7 text-regal-blue ls-1'>所有产品</h3>
+            </div>
+            <div className='product-items grid'>
               {products.map((product) => (
                 <ProductCard 
                   key={product.id}
@@ -23,7 +25,6 @@ const Products = () => {
           </div>
         </div>
       </section>
-    </>
   )
 }
 
